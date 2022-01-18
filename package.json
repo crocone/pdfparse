@@ -1,0 +1,31 @@
+{
+  "name": "pdfparse",
+  "version": "0.0.0-development",
+  "main": "index.js",
+  "scripts": {
+    "prettier:print": "prettier --list-different \"./**/*.js\" \"./**/*.md\"",
+    "prettier:check": "npm run -s prettier:print 1>&2; exit $(npm run -s prettier:print | wc -l)",
+    "prettier:fix": "prettier \"./**/*.js\" \"./**/*.md\" --write --end-of-line lf",
+    "lint": "eslint .",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crocone/pdfparse"
+  },
+  "author": "E Shevtsov",
+  "license": "MIT",
+  "dependencies": {
+    "pdf2json": "1.2.5"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/npm": "^7.1.3",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "2.3.0",
+    "semantic-release": "^17.4.3"
+  }
+}
